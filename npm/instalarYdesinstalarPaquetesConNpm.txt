@@ -1,0 +1,42 @@
+Para instalar paquetes externos:
+1- Nos ubicamos dentro de la carpeta del proyecto que vamos a crear
+2- Creamos un archivo package.json con la configuración inicial que se asigna por defecto con el comando: npm init --yes  o  npm init -y
+3- Para instalar un paquete vamos al terminal y escribimos el comando: npm install nombre_paquete
+   Ejemplo: npm install express
+   el comando anterior instalara express y todas sus dependencias.
+4- Nos aparece una nueva carpeta llamada node-modules donde se encuentran todos los 
+   distintos paquetes y módulos que se instalaron para permitirnos que express funcione
+   correctamente, y también nos aparece un archivo nuevo llamado package-lock.json
+5- para confirmar que ele paquete express se instalo correctamente abrimos el archivo 
+   package.json y en la parte que dice dependencies (dependencias) debe aparecer el nombre del paquete y la version
+
+
+Para desinstalar un paquete:
+1- Vamos a la terminal y escribimos el comando: npm uninstall nombre_paquete
+2- Para confirmar que el paquete fue eliminado abrimos el archivo package.json vemos que ya 
+   no se encuentra la lista de dependencias,
+
+
+Para instalar una version especifica de un paquete:
+1- Vamos a la terminal y escribimos el comando: npm install nombre_del_paquete@numero_version
+   Ejemplo: npm install express@4.15.1
+
+
+Para instalar dependencias:
+Vamos a la terminal y escribimos el comando: npm install
+Con el anterior comando se instalaran todas las dependencias (dependencies) que se indican en el archivo 
+package.json
+
+
+devDependencies
+Algunas dependencias solo las vamos a usar mientras estemos desarrollando la aplicación, no 
+se necesitan cuando la aplicación este en vivo, así que podemos guardar esas dependencias o 
+paquetes en una categoría especial, con el siguiente comando:
+nmp install nombre_paquete --save-dev
+ejemplo: npm install express --save-dev
+
+la parte --save-dev significa, guardar como desarrollo, dev es una abreviación de development que significa desarrollo
+
+La diferencia es que si vamos al archivo package.json el paquete aparece bajo la categoría
+de devDependencies o dependencias para el desarrollo
+

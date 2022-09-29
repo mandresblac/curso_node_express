@@ -1,0 +1,17 @@
+REPL(Read Eval Print Loop) o (Ciclo de leer, evaluar y  mostrar)
+
+Para ingresar al REPL escribimos en la consola el comando node, luego el comando .help y nos da las siguientes opciones:
+.editor : Permite ingresar en el modo editor
+.exit : Permite salir de la herramienta REPL
+.load : Permite cargar codigo de Javascript desde una archivo a una sesion interactiva de REPL
+.save : Permite guardar todos los comandos evaluados en una sesion de REPL en un archivo
+
+COMANDOS DE NODEJS
+node nombre_de_archivo_a_ejecutar : Para ejecutar un programa o archivo de node desde la terminal, ejemplo: node app.js
+
+Para exportar e importar elementos para poder trababjar con modulos o archivos y crear la comunicacion entre los modulos del proyecto
+
+Para exportar una funcion
+module.exports.nombre_funcion_o_propiedad = definicon_de_la funcion   ejemplo:
+module.exports.saludar = saludar;
+

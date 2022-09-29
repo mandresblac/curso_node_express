@@ -1,0 +1,47 @@
+npm (Node Package Manager) es el sistema de gestión de paquetes por defecto para Node.js
+
+De sus siglas NPM (Node Package Manager) es un gestor de paquetes desarrollado en su totalidad bajo el lenguaje JavaScript por Isaac Schlueter, a través del cual podemos obtener cualquier librería con tan solo una sencilla línea de código, lo cual nos permitirá agregar dependencias de forma simple, distribuir paquetes y administrar eficazmente tanto los módulos como el proyecto a desarrollar en general.
+
+Así mismo, es de gran importancia mencionar que Node.JS desde su versión 0.6.3 se instala automáticamente desde el entorno NPM, permitiendo a los desarrolladores instalar aplicaciones Node que se encuentren en el repositorio. En este mismo orden de ideas, cabe destacar que al instalar paquetes nuevos estos serán almacenados localmente en la carpeta que lleva por nombre “node_modules” dentro de nuestro proyecto (esto se lleva a cabo por defecto) sin embargo el desarrollador puede indicarle a NPM que instale dicho paquete de forma global, según lo considere necesario.
+
+Que es un paquete?
+es un Directorio o carpeta que contiene un conjunto de archivos que esta descrito por un archivo package.json
+
+Modulo
+Cualquier archivo o directorio en el directorio node_modules que puede ser importado con
+require().
+OJO: Para poder incluir un módulo con require(), debe ser un archivo javascript (.js) o una carpeta con un archivo package.json que contiene una propiedad "main".
+
+node_modules
+Es una carpeta que se va a crear automáticamente cuando trabajemos con npm y dentro de esa carpeta se encontraran todos los módulos o paquetes agrupados para poder usarlos en nuestro proyecto, de esos módulos solo los módulos que tienen un archivo package.json son paquetes, el archivo package.json es un archivo que describe al propio paquete.
+package significa paquete en español.
+
+Dependencia
+Paquete que necesita de otro paquete para poder funcionar correctamente.
+Una dependencia es básicamente un paquete del cual depende otro paquete.
+
+CREAR PAQUETE CON NPM
+1- Nos ubicamos dentro de la carpeta del proyecto que vamos a crear
+2- Escribimos en la terminal el comando: npm init (init es una abreviación de initialize o
+inicializar en español) y presionamos la tecla Enter.
+3- Nos preguntara:
+
+- package name:Escribimos el nombre que deseemos o dejamos el nombre por defecto.
+- version: podemos dejar la version por defecto.
+- description: Escribimos una breve descripción del proyecto.
+- entry point: Es el archivo principal del paquete, los elementos de ese archivo son los  
+  que se van a importar cuando importamos el paquete, podemos dejar el nombre que nos da por
+  defecto.
+- test command: Es el comando de prueba, lo podemos dejar vació y presionarla tecla Enter.
+- git repository: El repositorio de git, podemos dejarlo vació.
+- keywords: (Palabras claves) podemos dejarlo vació.
+- author: Escribimos el nombre del autor, en este caso tu nombre.
+- license: Por defecto es ISC, podemos dejarlo por defecto, podemos averiguar mas sobre los
+  distintos tipos de licencia para especificarlas en nuestro archivo package.json
+  4- Nos mostrara una vista previa del contenido que escribiremos en el archivo package.json y la ruta de ubicación de ese archivo.
+  5- Nos pregunta si esa información esta correcta, Is this OK? (yes), si presionamos la tecla enter estaremos diciendo que si.
+  6- Se crea el archivo package.json en nuestra carpeta, si lo abrimos, podemos ver el contenido que se mostró anteriormente en la vista previa.
+  7- LISTO YA TENEMOS CREADO NUESTRO ARCHIVO PACKAGE.JSON.
+
+Para evitarnos todo el proceso anterior simplemente podemos escribir en la terminal el comando: npm init --yes o npm init -y
+Con el anterior comando creamos un archivo package.json con todos los valores por defecto
