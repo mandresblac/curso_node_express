@@ -1,0 +1,15 @@
+Nodemon es una herramienta que reinicia la aplicación de Node.js cuando detecta algún cambio en los archivos, es decir, que ya no se tendrá que reiniciar el servidor cada vez que se haga un cambio cuando lo estemos desarrollando, el servidor se actualiza automáticamente sin tener que reiniciarlo.
+Esto es una genera una gran ventaja a la hora de desarrollar un servidor.
+
+Para instalar nodemon usamos el siguiente comando:
+npm install -g nodemon
+
+la opcion -g significa global porque lo mas recomendable es instalar nodemon como un comando global para que este disponible donde sea que lo necesites.
+
+Cuando se vaya a ejecutar la aplicación en vez de escribir:
+node nombre_de_archivo
+
+escribimos el comando:
+nodemon nombre_de_archivo
+
+ejemplo: nodemon app.js

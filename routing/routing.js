@@ -54,7 +54,28 @@ function manejarSolicitudPOST(req, res) {
   const path = req.url;
 
   if (path === "/cursos/programacion") {
-    return res.end(`El servidor recibió una solicitud POST para /cursos/programacion`);
+    
+    let cuerpo = "";
+
+    req.on("data", contenido => {
+      cuerpo += contenido.toString();
+    });
+
+    req.on("end", () => {
+      console.log(cuerpo);
+      console.log(typeof cuerpo);
+
+      //Convertimos a un objeto de javascript
+      cuerpo = JSON.parse(cuerpo);
+
+      console.log(typeof cuerpo);
+
+      console.log(cuerpo.titulo);
+
+      res.end(`El servidor recibió una solicitud POST para /cursos/programacion`);
+    });
+
+    //return res.end(`El servidor recibió una solicitud POST para /cursos/programacion`);
   }
 };
 
