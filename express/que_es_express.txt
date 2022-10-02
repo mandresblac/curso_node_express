@@ -1,0 +1,58 @@
+Express es el framework web más popular de Node.js.
+Express nos da herramientas y una estructura para el código que nos va a permitir 
+desarrollar servidores mucho mas fácilmente.
+
+El propósito de express es ayudarnos a desarrollar aplicaciones de Node.js
+
+Características de express:
+- Nos brinda un mecanismo mucho mas fácil para definir el Routing o creación de rutas que 
+  si se hace solo con node.js
+- Esta enfocado en alto rendimiento.
+ Nos permite desarrollar aplicaciones  de Node.js mas rápidamente con código mas conciso.
+
+
+CONCEPTOS BÁSICOS PARA MANEJAR EXPRESS
+
+CRUD: Es un acrónimo que representa las 4 operaciones básicas que se pueden realizar con la información que tenemos almacenada, ya sea en una base de datos, en un archivo, etc.
+Normalmente esta operaciones van a estar relacionadas con los métodos o verbos HTTP, y también van a estar estrechamente relacionadas con las APIs que se desarrollan con Node.js y express.
+
+Create (Crear un recurso)
+Read (Leer un recurso)
+Update (Actualizar un recurso)
+Delete (Eliminar un recurso)
+
+Las operaciones CRUD  tienen su equivalente en los métodos o verbos HTTP, así:
+
+Create ==> POST
+Read   ==> GET
+Update ==> PUT
+Delete ==> DELETE
+
+
+¿Como inicializamos o creamos una aplicación que requiera express?
+1- Lo primero es inicializar nuestro paquete escribiendo en la terminal el comando:
+   npm init
+2- Nos pregunta el nombre del paquete, package name: (curso-de-express)
+   Podemos asignarle el nombre por defecto de la carpeta del proyecto o podemos asignarle un nombre personalizado, por ejemplo: servidor-express
+3- version: (1.0.0) podemos dejar ese valor por defecto
+4- description: Damos una descripción breve del proyecto, por ejemplo: Mi primer servidor 
+   creado con Node.js y Express
+5- entry point: (punto de entrada) Escribimos el nombre del archivo principal que ejecutara 
+   toda la aplicación, por ejemplo: index.js o app.js
+6- test command: (comando de prueba) se puede dejar el valor por defecto.
+7- git repository: Presionamos la tecla enter.
+8- keywords: (Palabras clave) Se puede presionar la tecla enter
+9- author: (Autor) nombre del desarrollador de la aplicación
+10- license: (ISC) dejamos la licencia por defecto y presionamos la tecla enter
+11- Is this OK? (yes): (Esta todo correcto) presionamos la tecla enter.
+12- Se crea un archivo package.json con toda la información que acabamos de ingresar.
+
+13- El proximo paso es instalar express con el comando:
+    npm install express
+    Este comando va a instalar la ultima versión de express la mas reciente
+
+14- Después de instalar express nos aparece una carpeta de nombre node_modules donde estan 
+    todos los modulo instalados entre esos express
+
+15- Si queremos comprobar que express se instalo vamos al archivo package.json y en 
+    dependencies debe aparecer algo como "express": "^4.18.1"
