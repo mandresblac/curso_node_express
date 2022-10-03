@@ -1,7 +1,7 @@
 //En este archivo vamos a escribir la información sobre distintos cursos con los cuales vamos a trabajar
 
 let infoCursos = {
-  "programación": [
+  "programacion": [
     {
       id: 1,
       titulo: "Aprende Pyhon",
