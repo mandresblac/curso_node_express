@@ -1,0 +1,29 @@
+¿Que es un middleware en Express?
+
+Un Middleware tiene como propósito tomar dos piezas de la aplicación y conectarlas, como un puente en el que fluye la información. Normalmente decimos que una rutina de código tiene como propósito recibir información y retornarla transformada, la única característica especial de un Middleware es que la información la obtiene de otra función de código para luego enviársela a una función distinta más.
+
+Un middleware es una función que se puede ejecutar antes o después del manejo de una ruta. Esta función tiene acceso al objeto Request, Response y la función next().
+
+Las funciones middleware suelen ser utilizadas como mecanismo para verificar niveles de acceso antes de entrar en una ruta, manejo de errores, validación de datos, etc.
+
+Las funciones middleware son muy importantes en una aplicación de de Express js porque con ellas se pueden realizar validaciones, gestionar errores, sin la necesidad de llegar hasta la definición de las rutas. Por lo tanto es indispensable aprender a utilizarlas.
+
+Las funciones de middleware son funciones que tienen acceso al objeto de solicitud (req), al objeto de respuesta (res) y a la siguiente función de middleware en el ciclo de solicitud/respuestas de la aplicación. La siguiente función de middleware se denota normalmente con una variable denominada next.
+
+Las funciones de middleware pueden realizar las siguientes tareas:
+
+Ejecutar cualquier código.
+Realizar cambios en la solicitud y los objetos de respuesta.
+Finalizar el ciclo de solicitud/respuestas.
+Invocar la siguiente función de middleware en la pila.
+Si la función de middleware actual no finaliza el ciclo de solicitud/respuestas, debe invocar next() para pasar el control a la siguiente función de middleware. De lo contrario, la solicitud quedará colgada.
+
+Una aplicación Express puede utilizar los siguientes tipos de middleware:
+
+- Middleware de nivel de aplicación
+- Middleware de nivel de direccionador
+- Middleware de manejo de errores
+- Middleware incorporado
+- Middleware de terceros
+
+Puede cargar middleware de nivel de aplicación y de nivel de direccionador con una vía de acceso de montaje opcional. También puede cargar una serie de funciones de middleware a la vez, lo que crea una subpila del sistema de middleware en un punto de montaje.
